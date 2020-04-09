@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://labwyver.github.io</id>
     <title>Gridea</title>
-    <updated>2020-04-09T06:10:41.213Z</updated>
+    <updated>2020-04-09T13:11:34.850Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://labwyver.github.io"/>
     <link rel="self" href="https://labwyver.github.io/atom.xml"/>
@@ -10,4 +10,66 @@
     <logo>https://labwyver.github.io/images/avatar.png</logo>
     <icon>https://labwyver.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[P1505n 假装实现网络打印]]></title>
+        <id>https://labwyver.github.io/post/1-print-cups/</id>
+        <link href="https://labwyver.github.io/post/1-print-cups/">
+        </link>
+        <updated>2020-04-09T12:57:12.000Z</updated>
+        <content type="html"><![CDATA[<p>原理是电脑连接打印机（物理，USB）<br>
+通过SMB服务+CUPS服务局域网内共享</p>
+<p><s>目前还没研究出怎么用真正的“局域网”，OPEN***先凑活着用</s></p>
+<p>安装依赖<br>
+<code>sudo apt install autoconf build-essential libavahi-client-dev libgnutls28-dev libkrb5-dev libnss-mdns libpam-dev libsystemd-dev libusb-1.0-0-dev zlib1g-dev</code></p>
+<p>下载CUPS 2.28并编译安装<br>
+<code>cd /tmp</code><br>
+<code>wget -c https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/cups/2.2.8-5ubuntu1.2/cups_2.2.8.orig.tar.gz</code><br>
+<code>tar zxvf cups_2.2.8.orig.tar.gz</code><br>
+<code>cd cups-2.2.8</code><br>
+<code>./configure</code><br>
+<code>make</code><br>
+<code>sudo make install</code></p>
+<p>保持CUPS服务运行<br>
+<code>sudo apt-mark hold cups</code></p>
+<p>重启CUPS服务<br>
+<code>sudo service cups restart</code></p>
+<p>然后进入CUPS管理页<br>
+<a href="http://localhost:631/">http://localhost:631/</a><br>
+<img src="https://labwyver.github.io/post-images/1586437577766.png" alt="" loading="lazy"><br>
+挑钩全选，Change Settings</p>
+<p>Enjoy~<br>
+上网课打卷子一气呵成</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[P1505n 假装实现网络打印]]></title>
+        <id>https://labwyver.github.io/post/p1505n-jia-zhuang-shi-xian-wang-luo-da-yin/</id>
+        <link href="https://labwyver.github.io/post/p1505n-jia-zhuang-shi-xian-wang-luo-da-yin/">
+        </link>
+        <updated>2020-04-09T12:57:12.000Z</updated>
+        <content type="html"><![CDATA[<p>原理是电脑连接打印机（物理，USB）<br>
+通过SMB服务+CUPS服务局域网内共享</p>
+<p><s>目前还没研究出怎么用真正的“局域网”，OPEN***先凑活着用</s></p>
+<p>安装依赖<br>
+<code>sudo apt install autoconf build-essential libavahi-client-dev libgnutls28-dev libkrb5-dev libnss-mdns libpam-dev libsystemd-dev libusb-1.0-0-dev zlib1g-dev</code></p>
+<p>下载CUPS 2.28并编译安装<br>
+<code>cd /tmp</code><br>
+<code>wget -c https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/cups/2.2.8-5ubuntu1.2/cups_2.2.8.orig.tar.gz</code><br>
+<code>tar zxvf cups_2.2.8.orig.tar.gz</code><br>
+<code>cd cups-2.2.8</code><br>
+<code>./configure</code><br>
+<code>make</code><br>
+<code>sudo make install</code></p>
+<p>保持CUPS服务运行<br>
+<code>sudo apt-mark hold cups</code></p>
+<p>重启CUPS服务<br>
+<code>sudo service cups restart</code></p>
+<p>然后进入CUPS管理页<br>
+<a href="http://localhost:631/">http://localhost:631/</a><br>
+<img src="https://labwyver.github.io/post-images/1586437577766.png" alt="" loading="lazy"><br>
+挑钩全选，Change Settings</p>
+<p>Enjoy~<br>
+上网课打卷子一气呵成</p>
+]]></content>
+    </entry>
 </feed>
