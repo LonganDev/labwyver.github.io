@@ -1,8 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
 <!-- 必要参数 -->
 <meta charset="utf-8"/>
-<title>wyver H的小资料站</title>
+<title>外部链接 | wyver H的小资料站</title>
 <meta name="keywords" content="关键词"/>
 <meta name="description" content="简述"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable:no"/>
@@ -11,9 +12,10 @@
 <!-- CSS -->
 <link rel="stylesheet" href="https://labwyver.github.io/media/css/mdui.min.css">
 <link rel="stylesheet" href="https://labwyver.github.io/media/css/modify.css">
+<link rel="stylesheet" href="https://labwyver.github.io/media/css/github-gist.min.css">
+<link rel="stylesheet" href="https://labwyver.github.io/media/css/railscasts.min.css">
 </head>
-<body>
-<body class="mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-blue mdui-theme-layout-dark">
+<body id="post" class="mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-blue mdui-theme-layout-dark">
 <header role="banner">
     <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-shadow-0">
         <div class="mdui-toolbar">
@@ -37,18 +39,45 @@
 </nav>
 
 
-<main class="mdui-container mdui-m-t-2">
-    <div class="mdui-card">
+<main class="mdui-container mdui-typo mdui-m-t-2">
+    <section class="mdui-card">
+        
+        <div class="mdui-card-media">
+            <img src="https://i.loli.net/2020/04/09/MLyAOQImUwNvcnt.jpg">
+        </div>
+        
         <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">标签列表</div>
+            <div class="mdui-card-primary-title">外部链接</div>
+            <div class="mdui-card-primary-subtitle">发布于 20-04-09，包含标签 。</div>
         </div>
-        <div class="mdui-card-actions">
-            
-                <a href="https://labwyver.github.io/t7QH8Xls1/" class="mdui-chip"><span class="mdui-chip-title">Ubuntu</span></a>
-            
+        <div class="mdui-card-content"><p><strong>黄梅靓仔的奇妙仓库</strong><br>
+<a href="https://flamingo39.github.io/">https://flamingo39.github.io/</a><br>
+<strong>富佬常原的博客日常</strong><br>
+<a href="https://runebalot.cn/">https://runebalot.cn/</a></p>
+<p><strong>图片压缩</strong><br>
+<a href="https://www.picdiet.com/">https://www.picdiet.com/</a><br>
+<strong>图床</strong><br>
+<a href="https://sm.ms/">https://sm.ms/</a></p>
+<p>Go 教程<br>
+<a href="https://github.com/ffhelicopter/Go42/blob/master/SUMMARY.md">https://github.com/ffhelicopter/Go42/blob/master/SUMMARY.md</a></p>
+<!-- more -->
+<p><strong>假装有赞助</strong><br>
+<a href="https://wiki.yogurtcloud.com/">https://wiki.yogurtcloud.com/</a></p>
+</div>
+        <div class="mdui-card-header">
+            <img class="mdui-card-header-avatar" src="https://labwyver.github.io/images/avatar.png">
+            <div class="mdui-card-header-title">wyver H的小资料站</div>
+            <div class="mdui-card-header-subtitle">想必，女孩子是由砂糖、香辛料和某些美好的东西组成的吧...</div>
         </div>
-    </div>
+    </section>
+
+      
 </main>
+
+<nav class="mdui-container mdui-m-t-2 mdui-m-b-2">
+    
+    
+</nav>
 
 <div class="mdui-m-t-2 mdui-text-center mdui-typo">
     Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
@@ -57,6 +86,16 @@
 <script src="https://labwyver.github.io/media/js/jquery.min.js"></script>
 <script src="https://labwyver.github.io/media/js/mdui.min.js"></script>
 <script src="https://labwyver.github.io/media/js/modify.js"></script>
+<script src="https://labwyver.github.io/media/js/highlight.min.js"></script>
+<script src="https://labwyver.github.io/media/js/lightense.min.js"></script>
+<script>
+// 初始化-高亮代码
+hljs.initHighlightingOnLoad();
+// 初始化-文章图片放大
+window.addEventListener('load', function () {
+    Lightense('#post .mdui-card-content img');
+}, false);
+</script>
 
 </body>
 </html>

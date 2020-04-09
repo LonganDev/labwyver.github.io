@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- 必要参数 -->
+<meta charset="utf-8"/>
+<title>P1505n 假装实现网络打印 | wyver H的小资料站</title>
+<meta name="keywords" content="关键词"/>
+<meta name="description" content="简述"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable:no"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="shortcut icon" href="favicon.ico">
+<!-- CSS -->
+<link rel="stylesheet" href="https://labwyver.github.io/media/css/mdui.min.css">
+<link rel="stylesheet" href="https://labwyver.github.io/media/css/modify.css">
+<link rel="stylesheet" href="https://labwyver.github.io/media/css/github-gist.min.css">
+<link rel="stylesheet" href="https://labwyver.github.io/media/css/railscasts.min.css">
+</head>
+<body id="post" class="mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-blue mdui-theme-layout-dark">
+<header role="banner">
+    <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-shadow-0">
+        <div class="mdui-toolbar">
+            <button class="mdui-btn mdui-btn-icon" id="menu" mdui-drawer="{target:'#drawer',overlay:true,swipe:true}"><i class="mdui-icon material-icons">menu</i></button>
+            <a href="https://labwyver.github.io" class="mdui-typo-headline">wyver H的小资料站</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '深色样式切换', position: 'left'}" id="DarkStyle"><i class="mdui-icon material-icons">brightness_4</i></button>
+        </div>
+    </div>
+</header>
+
+<nav id="drawer" class="mdui-drawer mdui-drawer-full-height mdui-drawer-close">
+    <ul class="mdui-list">
+        <a href="/" class="menu"><li class="mdui-list-item mdui-ripple">首页</li></a>
+        <a href="https://labwyver.github.io/post/moelinks" class="menu"><li class="mdui-list-item mdui-ripple">友链</li></a>
+        <a href="/tags" class="menu"><li class="mdui-list-item mdui-ripple">标签</li></a>
+        <a href="/post/about" class="menu"><li class="mdui-list-item mdui-ripple">关于</li></a>
+        
+        <a href="https://github.com/CPlayer-CN/gridea-theme-cplayer-material" class="spread"><li class="mdui-list-item mdui-ripple">主题主页</li></a>
+    </ul>
+</nav>
+
+
+<main class="mdui-container mdui-typo mdui-m-t-2">
+    <section class="mdui-card">
+        
+        <div class="mdui-card-media">
+            <img src="https://i.loli.net/2020/04/09/BcKOzkJNlgpS2rY.jpg">
+        </div>
+        
+        <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title">P1505n 假装实现网络打印</div>
+            <div class="mdui-card-primary-subtitle">发布于 20-04-09，包含标签 <a href="https://labwyver.github.io/t7QH8Xls1/" class="post-tags"># Ubuntu</a>。</div>
+        </div>
+        <div class="mdui-card-content"><p>原理是电脑连接打印机（物理，USB）<br>
+通过SMB服务+CUPS服务局域网内共享</p>
+<p><s>目前还没研究出怎么用真正的“局域网”，OPEN***先凑活着用</s></p>
+<p>安装依赖<br>
+<code>sudo apt install autoconf build-essential libavahi-client-dev libgnutls28-dev libkrb5-dev libnss-mdns libpam-dev libsystemd-dev libusb-1.0-0-dev zlib1g-dev</code></p>
+<p>下载CUPS 2.28并编译安装<br>
+<code>cd /tmp</code><br>
+<code>wget -c https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/cups/2.2.8-5ubuntu1.2/cups_2.2.8.orig.tar.gz</code><br>
+<code>tar zxvf cups_2.2.8.orig.tar.gz</code><br>
+<code>cd cups-2.2.8</code><br>
+<code>./configure</code><br>
+<code>make</code><br>
+<code>sudo make install</code></p>
+<p>保持CUPS服务运行<br>
+<code>sudo apt-mark hold cups</code></p>
+<p>重启CUPS服务<br>
+<code>sudo service cups restart</code></p>
+<p>然后进入CUPS管理页<br>
+<a href="http://localhost:631/">http://localhost:631/</a><br>
+<img src="https://labwyver.github.io/post-images/1586437577766.png" alt="" loading="lazy"><br>
+挑钩全选，Change Settings</p>
+<p>Enjoy~<br>
+上网课打卷子一气呵成</p>
+</div>
+        <div class="mdui-card-header">
+            <img class="mdui-card-header-avatar" src="https://labwyver.github.io/images/avatar.png">
+            <div class="mdui-card-header-title">wyver H的小资料站</div>
+            <div class="mdui-card-header-subtitle">想必，女孩子是由砂糖、香辛料和某些美好的东西组成的吧...</div>
+        </div>
+    </section>
+
+      
+</main>
+
+<nav class="mdui-container mdui-m-t-2 mdui-m-b-2">
+    
+    
+</nav>
+
+<div class="mdui-m-t-2 mdui-text-center mdui-typo">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</div>
+
+<script src="https://labwyver.github.io/media/js/jquery.min.js"></script>
+<script src="https://labwyver.github.io/media/js/mdui.min.js"></script>
+<script src="https://labwyver.github.io/media/js/modify.js"></script>
+<script src="https://labwyver.github.io/media/js/highlight.min.js"></script>
+<script src="https://labwyver.github.io/media/js/lightense.min.js"></script>
+<script>
+// 初始化-高亮代码
+hljs.initHighlightingOnLoad();
+// 初始化-文章图片放大
+window.addEventListener('load', function () {
+    Lightense('#post .mdui-card-content img');
+}, false);
+</script>
+
+</body>
+</html>
