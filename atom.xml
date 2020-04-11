@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://labwyver.github.io</id>
     <title>桂圆的^H^资料站  -  labwyver Project H</title>
-    <updated>2020-04-10T00:52:21.916Z</updated>
+    <updated>2020-04-11T02:04:03.401Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://labwyver.github.io"/>
     <link rel="self" href="https://labwyver.github.io/atom.xml"/>
@@ -10,6 +10,55 @@
     <logo>https://labwyver.github.io/images/avatar.png</logo>
     <icon>https://labwyver.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 桂圆的^H^资料站  -  labwyver Project H</rights>
+    <entry>
+        <title type="html"><![CDATA[Terminator + Zsh 终端修改]]></title>
+        <id>https://labwyver.github.io/terminator-zsh-zhong-duan-xiu-gai/</id>
+        <link href="https://labwyver.github.io/terminator-zsh-zhong-duan-xiu-gai/">
+        </link>
+        <updated>2020-04-10T13:52:10.000Z</updated>
+        <summary type="html"><![CDATA[<p>看 Kally 直播5分钟，只注意到<br>
+终端好好看！Ubuntu 怎么能做出这样的效果！<br>
+故 咕鸽一下，成功的把 gnome-terminal 玩坏了( ・_ゝ・)<br>
+<s>当然后面用<code>/etc/skel/.bashrc</code> 救回来了</s><br>
+当然折腾不能这么结束，接下来就是安装有一大堆主题的Zsh了<br>
+系统自带的玩坏过一次了，换掉换掉</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>看 Kally 直播5分钟，只注意到<br>
+终端好好看！Ubuntu 怎么能做出这样的效果！<br>
+故 咕鸽一下，成功的把 gnome-terminal 玩坏了( ・_ゝ・)<br>
+<s>当然后面用<code>/etc/skel/.bashrc</code> 救回来了</s><br>
+当然折腾不能这么结束，接下来就是安装有一大堆主题的Zsh了<br>
+系统自带的玩坏过一次了，换掉换掉</p>
+<!-- more -->
+<p><strong>安装 Terminator</strong><br>
+<code>sudo apt-get install terminator</code></p>
+<!-- more -->
+<p><strong>右键菜单替换</strong><br>
+<em>1.安装Nautilus-actions</em><br>
+<code>sudo apt-get install nautilus-actions</code><br>
+<em>2.打开Nautilus-actions，如图设置</em><br>
+<img src="https://labwyver.github.io/post-images/1586569400530.png" alt="" loading="lazy"><br>
+<img src="https://labwyver.github.io/post-images/1586569407770.png" alt="" loading="lazy"><br>
+（此处为<code>--working-directory=%d/%b</code>）<br>
+顶栏左上角—Preferences<br>
+<img src="https://labwyver.github.io/post-images/1586569511254.png" alt="" loading="lazy"><br>
+<em>3.更改设置</em><br>
+<code>nautilus -q</code>                                                           //生效<br>
+<code>sudo apt remove nautilus-extension-gnome-terminal</code>     //删除原选项<br>
+<em>4.按个人喜好稍微改一下Terminator的设置（比如透明度）</em></p>
+<!-- more -->
+<p><strong>安装 Zsh</strong><br>
+<code>sudo apt-get install zsh</code>                                 //安装<br>
+<code>chsh -s $(which zsh)</code>                                       //设为默认终端</p>
+<p>安装 Oh My Zsh（配置用）**<br>
+<code>sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</code></p>
+<!-- more -->
+<p><strong>主题切换到 bira</strong><br>
+<code>gedit ~/.zshrc</code><br>
+结尾加入<br>
+<a href="https://h.labwyver.cn/archives/bira.txt" target="_blank">「点击查看，格式为txt文档」</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[P1505n 假装实现网络打印]]></title>
         <id>https://labwyver.github.io/1-print-cups/</id>

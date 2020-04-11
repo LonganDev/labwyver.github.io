@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>我的观影 | 桂圆的^H^资料站  -  labwyver Project H</title>
+<title>Terminator + Zsh 终端修改 | 桂圆的^H^资料站  -  labwyver Project H</title>
 <meta name="description" content="想必，女孩子是由砂糖、香辛料和某些美好的东西组成的吧..." />
 <link rel="shortcut icon" href="https://labwyver.github.io/favicon.ico">
 <link rel="stylesheet" href="https://labwyver.github.io/styles/main.css">
@@ -19,13 +19,16 @@
 
 
     <meta name="referrer" content="never">
-    <link rel="stylesheet" href="https://labwyver.github.io/media/js/Bmdb.min.css">
-    <script type='text/javascript' src='https://labwyver.github.io/media/js/Bmdb.min.js'></script>
+    <meta name="description" content="看 Kally 直播5分钟，只注意到
+终端好好看！Ubuntu 怎么能做出这样的效果！
+故 咕鸽一下，成功的把 gnome-terminal 玩坏了( ・_ゝ・)
+当然后面用/etc/skel/.bashrc 救回来了
+当然折腾不能这么结束..." />
+    <meta name="keywords" content="" />
+    <script src="https://labwyver.github.io/media/js/waterfall.min.js"></script>
+    <script src="https://labwyver.github.io/media/js/prism.min.js"></script>
   </head>
   <body>
-    <!-- start: #wrapper -->
-    <div class="wrapper">
-      
             <header id="header" class="grid-container">
         <!-- start: .menu-wrapper -->
         <div class="menu-mobile"> 
@@ -86,14 +89,108 @@
         </div>
       </div>
 
-      <main id="friends" class="main fullcover no-sidebar content">
-        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('/media/images/custom-featureImage.png');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="20-04-10"><i class="fa fa-calendar"></i><span class="lately">12 小时前</span></time>
+              
+              <a href="https://labwyver.github.io/terminator-zsh-zhong-duan-xiu-gai/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/terminator-zsh-zhong-duan-xiu-gai/"> </span>
+              </a>
+              <span id="/terminator-zsh-zhong-duan-xiu-gai/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+              </div>
+              <h1 class="title ularge white bold">Terminator + Zsh 终端修改</h1>
+            </div>
+          </div>
+        </div>  
+
         <div class="epcl-page-wrapper">
-          <div class="section-content" style="margin-top:3em;"></div>
-        </div>
-        </div>
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <p>看 Kally 直播5分钟，只注意到<br>
+终端好好看！Ubuntu 怎么能做出这样的效果！<br>
+故 咕鸽一下，成功的把 gnome-terminal 玩坏了( ・_ゝ・)<br>
+<s>当然后面用<code>/etc/skel/.bashrc</code> 救回来了</s><br>
+当然折腾不能这么结束，接下来就是安装有一大堆主题的Zsh了<br>
+系统自带的玩坏过一次了，换掉换掉</p>
+<!-- more -->
+<p><strong>安装 Terminator</strong><br>
+<code>sudo apt-get install terminator</code></p>
+<!-- more -->
+<p><strong>右键菜单替换</strong><br>
+<em>1.安装Nautilus-actions</em><br>
+<code>sudo apt-get install nautilus-actions</code><br>
+<em>2.打开Nautilus-actions，如图设置</em><br>
+<img src="https://labwyver.github.io/post-images/1586569400530.png" alt="" loading="lazy"><br>
+<img src="https://labwyver.github.io/post-images/1586569407770.png" alt="" loading="lazy"><br>
+（此处为<code>--working-directory=%d/%b</code>）<br>
+顶栏左上角—Preferences<br>
+<img src="https://labwyver.github.io/post-images/1586569511254.png" alt="" loading="lazy"><br>
+<em>3.更改设置</em><br>
+<code>nautilus -q</code>                                                           //生效<br>
+<code>sudo apt remove nautilus-extension-gnome-terminal</code>     //删除原选项<br>
+<em>4.按个人喜好稍微改一下Terminator的设置（比如透明度）</em></p>
+<!-- more -->
+<p><strong>安装 Zsh</strong><br>
+<code>sudo apt-get install zsh</code>                                 //安装<br>
+<code>chsh -s $(which zsh)</code>                                       //设为默认终端</p>
+<p>安装 Oh My Zsh（配置用）**<br>
+<code>sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</code></p>
+<!-- more -->
+<p><strong>主题切换到 bira</strong><br>
+<code>gedit ~/.zshrc</code><br>
+结尾加入<br>
+<a href="https://h.labwyver.cn/archives/bira.txt" target="_blank">「点击查看，格式为txt文档」</a></p>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://i.loli.net/2020/04/09/BcKOzkJNlgpS2rY.jpg');"></div>
+                 <a href="https://labwyver.github.io/1-print-cups/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="20-04-09">20-04-09</time>
+                  <h4 class="title white no-margin">P1505n 假装实现网络打印</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://labwyver.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+              </div>
+              <div class="clear"></div>
+            
+
+            </div>
+          </div>
       </main>
-        <footer id="footer" class="grid-container">
+
+          <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
               <div class="grid-33 tablet-grid-50 mobile-grid-100">
@@ -220,15 +317,9 @@
 <script src="https://cdn.jsdelivr.net/gh/labwyver/labwyver.github.io/media/js/jquery.min.js"></script>
 
 
-    <script>
-    new Bmdb({
-      type: 'movies',
-      selector: '.section-content',
-      secret: '0bba46738324c778ad2da662837c14d2c1e5bceb22e3729febc9fd3677bdcea5',
-      noMoreText: '没有更多数据了',
-      limit: 30
-    })
-    </script>
+      
+    <script src="https://labwyver.github.io/media/js/functions-post.js"></script>
+
     </div>
     <!-- end: #wrapper -->
   </body>
