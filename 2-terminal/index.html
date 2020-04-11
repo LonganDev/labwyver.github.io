@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>P1505n 假装实现网络打印 | 桂圆的^H^资料站  -  labwyver Project H</title>
+<title>Terminator + Zsh 终端修改 | 桂圆的^H^资料站  -  labwyver Project H</title>
 <meta name="description" content="想必，女孩子是由砂糖、香辛料和某些美好的东西组成的吧..." />
 <link rel="shortcut icon" href="https://labwyver.github.io/favicon.ico">
 <link rel="stylesheet" href="https://labwyver.github.io/styles/main.css">
@@ -19,11 +19,11 @@
 
 
     <meta name="referrer" content="never">
-    <meta name="description" content="原理是电脑连接打印机（物理，USB）
-通过SMB服务+CUPS服务局域网内共享
-目前还没研究出怎么用真正的“局域网”，OPEN***先凑活着用
-安装依赖
-sudo apt install autoconf build-essential l..." />
+    <meta name="description" content="看 Kally 直播5分钟，只注意到
+终端好好看！Ubuntu 怎么能做出这样的效果！
+故 咕鸽一下，成功的把 gnome-terminal 玩坏了( ・_ゝ・)
+当然后面用/etc/skel/.bashrc 救回来了
+当然折腾不能这么结束..." />
     <meta name="keywords" content="Ubuntu" />
     <script src="https://labwyver.github.io/media/js/waterfall.min.js"></script>
     <script src="https://labwyver.github.io/media/js/prism.min.js"></script>
@@ -92,14 +92,14 @@ sudo apt install autoconf build-essential l..." />
       <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
 
         <div class="center content">
-          <div class="featured-image cover" style="background-image: url('https://i.loli.net/2020/04/09/BcKOzkJNlgpS2rY.jpg');">
+          <div class="featured-image cover" style="background-image: url('https://i.loli.net/2020/04/11/UdXL36MehzQHlVq.jpg');">
             <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="20-04-09"><i class="fa fa-calendar"></i><span class="lately">2 天前</span></time>
+              <time class="meta-info" style="float:left;" datetime="20-04-10"><i class="fa fa-calendar"></i><span class="lately">12 小时前</span></time>
               
-              <a href="https://labwyver.github.io/1-print-cups/#comments" class="comments meta-info" title="">
-                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/1-print-cups/"> </span>
+              <a href="https://labwyver.github.io/2-terminal/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/2-terminal/"> </span>
               </a>
-              <span id="/1-print-cups/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              <span id="/2-terminal/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
               
             </div>
             <div class="info">
@@ -108,7 +108,7 @@ sudo apt install autoconf build-essential l..." />
                       <a href="https://labwyver.github.io/t7QH8Xls1/" class="ctag ctag-0 ctag-t7QH8Xls1" aria-label="">Ubuntu</a>
                     
               </div>
-              <h1 class="title ularge white bold">P1505n 假装实现网络打印</h1>
+              <h1 class="title ularge white bold">Terminator + Zsh 终端修改</h1>
             </div>
           </div>
         </div>  
@@ -118,29 +118,40 @@ sudo apt install autoconf build-essential l..." />
             <article class="main-article post">
               <section class="post-content">
                 <div class="text">
-                  <p>原理是电脑连接打印机（物理，USB）<br>
-通过SMB服务+CUPS服务局域网内共享</p>
-<p><s>目前还没研究出怎么用真正的“局域网”，OPEN***先凑活着用</s></p>
-<p>安装依赖<br>
-<code>sudo apt install autoconf build-essential libavahi-client-dev libgnutls28-dev libkrb5-dev libnss-mdns libpam-dev libsystemd-dev libusb-1.0-0-dev zlib1g-dev</code></p>
-<p>下载CUPS 2.28并编译安装<br>
-<code>cd /tmp</code><br>
-<code>wget -c https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/cups/2.2.8-5ubuntu1.2/cups_2.2.8.orig.tar.gz</code><br>
-<code>tar zxvf cups_2.2.8.orig.tar.gz</code><br>
-<code>cd cups-2.2.8</code><br>
-<code>./configure</code><br>
-<code>make</code><br>
-<code>sudo make install</code></p>
-<p>保持CUPS服务运行<br>
-<code>sudo apt-mark hold cups</code></p>
-<p>重启CUPS服务<br>
-<code>sudo service cups restart</code></p>
-<p>然后进入CUPS管理页<br>
-<a href="http://localhost:631/">http://localhost:631/</a><br>
-<img src="https://labwyver.github.io/post-images/1586437577766.png" alt="" loading="lazy"><br>
-挑钩全选，Change Settings</p>
-<p>Enjoy~<br>
-上网课打卷子一气呵成</p>
+                  <p>看 Kally 直播5分钟，只注意到<br>
+终端好好看！Ubuntu 怎么能做出这样的效果！<br>
+故 咕鸽一下，成功的把 gnome-terminal 玩坏了( ・_ゝ・)<br>
+<s>当然后面用<code>/etc/skel/.bashrc</code> 救回来了</s><br>
+当然折腾不能这么结束，接下来就是安装有一大堆主题的Zsh了<br>
+系统自带的玩坏过一次了，换掉换掉</p>
+<!-- more -->
+<p><strong>安装 Terminator</strong><br>
+<code>sudo apt-get install terminator</code></p>
+<!-- more -->
+<p><strong>右键菜单替换</strong><br>
+<em>1.安装Nautilus-actions</em><br>
+<code>sudo apt-get install nautilus-actions</code><br>
+<em>2.打开Nautilus-actions，如图设置</em><br>
+<img src="https://labwyver.github.io/post-images/1586569400530.png" alt="" loading="lazy"><br>
+<img src="https://labwyver.github.io/post-images/1586569407770.png" alt="" loading="lazy"><br>
+（此处为<code>--working-directory=%d/%b</code>）<br>
+顶栏左上角—Preferences<br>
+<img src="https://labwyver.github.io/post-images/1586569511254.png" alt="" loading="lazy"><br>
+<em>3.更改设置</em><br>
+<code>nautilus -q</code>                                                           //生效<br>
+<code>sudo apt remove nautilus-extension-gnome-terminal</code>     //删除原选项<br>
+<em>4.按个人喜好稍微改一下Terminator的设置（比如透明度）</em></p>
+<!-- more -->
+<p><strong>安装 Zsh</strong><br>
+<code>sudo apt-get install zsh</code>                                 //安装<br>
+<code>chsh -s $(which zsh)</code>                                       //设为默认终端</p>
+<p>安装 Oh My Zsh（配置用）**<br>
+<code>sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</code></p>
+<!-- more -->
+<p><strong>主题切换到 bira</strong><br>
+<code>gedit ~/.zshrc</code><br>
+结尾加入<br>
+<a href="https://h.labwyver.cn/archives/bira.txt" target="_blank">「点击查看，格式为txt文档」</a></p>
 
                 </div>
                 <div class="clear"></div>
@@ -150,19 +161,19 @@ sudo apt install autoconf build-essential l..." />
 
             <section class="related section">
               
-              <article class="prev grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://i.loli.net/2020/04/11/UdXL36MehzQHlVq.jpg');"></div>
-                 <a href="https://labwyver.github.io/2-terminal/" class="full-link"></a>
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://i.loli.net/2020/04/09/BcKOzkJNlgpS2rY.jpg');"></div>
+                 <a href="https://labwyver.github.io/1-print-cups/" class="full-link"></a>
                  <div class="info">
-                  <time datetime="20-04-10">20-04-10</time>
-                  <h4 class="title white no-margin">Terminator + Zsh 终端修改</h4>
+                  <time datetime="20-04-09">20-04-09</time>
+                  <h4 class="title white no-margin">P1505n 假装实现网络打印</h4>
                 </div>
                  <span class="epcl-button red">
-                  <img src="https://labwyver.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                  <img src="https://labwyver.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
                 </span>
                 <div class="overlay"></div>
               </article>
-              
               
 
                 <div class="clear"></div>
