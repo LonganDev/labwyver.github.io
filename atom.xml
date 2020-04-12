@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://labwyver.github.io</id>
     <title>桂圆的^H^资料站  -  labwyver Project H</title>
-    <updated>2020-04-12T03:06:52.138Z</updated>
+    <updated>2020-04-12T03:07:49.936Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://labwyver.github.io"/>
     <link rel="self" href="https://labwyver.github.io/atom.xml"/>
@@ -10,56 +10,6 @@
     <logo>https://labwyver.github.io/images/avatar.png</logo>
     <icon>https://labwyver.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 桂圆的^H^资料站  -  labwyver Project H</rights>
-    <entry>
-        <title type="html"><![CDATA[升级到Ubuntu 19.10]]></title>
-        <id>https://labwyver.github.io/sheng-ji-dao-ubuntu-1910/</id>
-        <link href="https://labwyver.github.io/sheng-ji-dao-ubuntu-1910/">
-        </link>
-        <updated>2020-04-12T02:47:09.000Z</updated>
-        <summary type="html"><![CDATA[<p>用了 Ubuntu 18.04 LTS 是浑身难受，软件包都不是最新( ´_ゝ`)旦<br>
-不如更新，稳定性都给 爷 爬<br>
-bionic -update- eoan</p>
-<p><strong>例行公事</strong><br>
-<code>sudo apt update &amp;&amp; sudo apt upgrade &amp;&amp; sudo apt dist-upgrade</code></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>用了 Ubuntu 18.04 LTS 是浑身难受，软件包都不是最新( ´_ゝ`)旦<br>
-不如更新，稳定性都给 爷 爬<br>
-bionic -update- eoan</p>
-<p><strong>例行公事</strong><br>
-<code>sudo apt update &amp;&amp; sudo apt upgrade &amp;&amp; sudo apt dist-upgrade</code></p>
-<!-- more -->
-<p><strong>安装</strong><code>update-manager-core</code><br>
-<code>sudo apt install update-manager-core</code></p>
-<!-- more -->
-<p><strong>更改分支</strong><br>
---系统主体<br>
-<code>sudo gedit /etc/update-manager/release-upgrades</code><br>
-最后一行改成<code>Prompt=normal</code><br>
---软件源<br>
-<code>sudo sed -i 's/bionic/eoan/g' /etc/apt/sources.list //意思大概是把更新分支从18改成19</code></p>
-<!-- more -->
-<p><strong>禁用PPA</strong><br>
-<code>sudo sed -i 's/^/#/' /etc/apt/sources.list.d/*.list</code></p>
-<!-- more -->
-<p><strong>最小升级 &amp; 完整升级</strong><br>
-<code>sudo apt update //最好分开执行</code><br>
-<code>sudo apt upgrade</code><br>
-<code>sudo apt dist-upgrade</code><br>
-<s>中</s>出现的选项，根据英文选择无脑更新<br>
-<strong>清理</strong><br>
-<code>sudo apt autoremove &amp;&amp; sudo apt clean</code><br>
-<strong>重启</strong><br>
-<code>sudo systemctl reboot -i //老ctl人了</code></p>
-<!-- more -->
-<p><strong>启用PPA</strong><br>
-<code>sudo sed -i '/deb/s/^#//g' /etc/apt/sources.list.d/*.list</code><br>
-<code>sudo sed -i 's/bionic/eoan/g' /etc/apt/sources.list.d/*.list</code><br>
-执行完以上命令后，<em>例行公事</em>一下<br>
-如果个别软件更新出错，把<code>eoan</code>改回<code>bionic</code>即可</p>
-<!-- more -->
-<p><s>看着屏幕上滚动的命令超爽的</s></p>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[升级到Ubuntu 19.10]]></title>
         <id>https://labwyver.github.io/update-1910/</id>
