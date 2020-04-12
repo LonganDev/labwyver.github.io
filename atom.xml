@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://labwyver.github.io</id>
     <title>桂圆的^H^资料站  -  labwyver Project H</title>
-    <updated>2020-04-12T02:27:19.818Z</updated>
+    <updated>2020-04-12T02:30:18.534Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://labwyver.github.io"/>
     <link rel="self" href="https://labwyver.github.io/atom.xml"/>
@@ -16,14 +16,8 @@
         <link href="https://labwyver.github.io/3-smbd/">
         </link>
         <updated>2020-04-12T01:54:22.000Z</updated>
-        <summary type="html"><![CDATA[<p>暂时想不到更好的传输协议，用SMB协议能与Windows共享，就选它了<br>
-<s>其实终端用的是Android</s><br>
-因为这里部署好了，后面的<a href="/1-print-cups/" target="_blank">CUPS服务</a>也就顺理成章（逃</p>
-<p><strong>先选定共享文件夹</strong>(这里为~/share/)<br>
-<code>mkdir ~/share</code><br>
-<code>chmod 777 ~/share</code></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>暂时想不到更好的传输协议，用SMB协议能与Windows共享，就选它了<br>
+        <content type="html"><![CDATA[<!-- more -->
+<p>暂时想不到更好的传输协议，用SMB协议能与Windows共享，就选它了<br>
 <s>其实终端用的是Android</s><br>
 因为这里部署好了，后面的<a href="/1-print-cups/" target="_blank">CUPS服务</a>也就顺理成章（逃</p>
 <p><strong>先选定共享文件夹</strong>(这里为~/share/)<br>
@@ -105,19 +99,14 @@
         <link href="https://labwyver.github.io/1-print-cups/">
         </link>
         <updated>2020-04-09T12:57:12.000Z</updated>
-        <summary type="html"><![CDATA[<p>原理是电脑连接打印机（物理，USB）<br>
+        <content type="html"><![CDATA[<!-- more -->
+<p>原理是电脑连接打印机（物理，USB）<br>
 通过SMB服务+CUPS服务局域网内共享<br>
 <a href="/3-smbd/" target="_blank">SMB服务配置点我查看</a></p>
 <p><s>目前还没研究出怎么用真正的“局域网”，OPEN***先凑活着用</s></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>原理是电脑连接打印机（物理，USB）<br>
-通过SMB服务+CUPS服务局域网内共享<br>
-<a href="/3-smbd/" target="_blank">SMB服务配置点我查看</a></p>
-<p><s>目前还没研究出怎么用真正的“局域网”，OPEN***先凑活着用</s></p>
-<!-- more -->
-<p>安装依赖<br>
+<p><strong>安装依赖</strong><br>
 <code>sudo apt install autoconf build-essential libavahi-client-dev libgnutls28-dev libkrb5-dev libnss-mdns libpam-dev libsystemd-dev libusb-1.0-0-dev zlib1g-dev</code></p>
-<p>下载CUPS 2.28并编译安装<br>
+<p><strong>下载CUPS 2.28并编译安装</strong><br>
 <code>cd /tmp</code><br>
 <code>wget -c https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/cups/2.2.8-5ubuntu1.2/cups_2.2.8.orig.tar.gz</code><br>
 <code>tar zxvf cups_2.2.8.orig.tar.gz</code><br>
@@ -125,9 +114,9 @@
 <code>./configure</code><br>
 <code>make</code><br>
 <code>sudo make install</code></p>
-<p>保持CUPS服务运行<br>
+<p><strong>保持CUPS服务运行</strong><br>
 <code>sudo apt-mark hold cups</code></p>
-<p>重启CUPS服务<br>
+<p><strong>重启CUPS服务</strong><br>
 <code>sudo service cups restart</code></p>
 <p>然后进入CUPS管理页<br>
 <a href="http://localhost:631/">http://localhost:631/</a><br>
