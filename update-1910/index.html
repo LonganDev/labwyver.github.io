@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | 桂圆的^H^资料站  -  labwyver Project H</title>
+<title>升级到Ubuntu 19.10 | 桂圆的^H^资料站  -  labwyver Project H</title>
 <meta name="description" content="想必，女孩子是由砂糖、香辛料和某些美好的东西组成的吧..." />
 <link rel="shortcut icon" href="https://labwyver.github.io/favicon.ico">
 <link rel="stylesheet" href="https://labwyver.github.io/styles/main.css">
@@ -19,16 +19,12 @@
 
 
     <meta name="referrer" content="never">
-    <meta name="description" content="一只苦逼的天津中学生这样写道：
-本站创建于2020年 4月 9日
-托管在 Github Pages
-辅助工具为 「Gridea」 (主题  Breek  )
-
-联系方式
-QQ   2787725235
-TG    @labwyver 
-邮箱..." />
-    <meta name="keywords" content="" />
+    <meta name="description" content="用了 Ubuntu 18.04 LTS 是浑身难受，软件包都不是最新( ´_ゝ`)旦
+不如更新，稳定性都给 爷 爬
+bionic -update- eoan
+例行公事
+sudo apt update &amp;&amp; sudo apt ..." />
+    <meta name="keywords" content="Ubuntu" />
     <script src="https://labwyver.github.io/media/js/waterfall.min.js"></script>
     <script src="https://labwyver.github.io/media/js/prism.min.js"></script>
   </head>
@@ -96,21 +92,23 @@ TG    @labwyver
       <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
 
         <div class="center content">
-          <div class="featured-image cover" style="background-image: url('https://i.loli.net/2020/04/10/guCI6b1xwnpY4XE.jpg');">
+          <div class="featured-image cover" style="background-image: url('https://i.loli.net/2020/04/12/MrWvohUHeucjkDb.jpg');">
             <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="18-10-02"><i class="fa fa-calendar"></i><span class="lately">2 年前</span></time>
+              <time class="meta-info" style="float:left;" datetime="20-04-12"><i class="fa fa-calendar"></i><span class="lately">20 分钟前</span></time>
               
-              <a href="https://labwyver.github.io/about/#comments" class="comments meta-info" title="">
-                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/about/"> </span>
+              <a href="https://labwyver.github.io/update-1910/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/update-1910/"> </span>
               </a>
-              <span id="/about/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              <span id="/update-1910/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
               
             </div>
             <div class="info">
               <div class="tags ">
                 
+                      <a href="https://labwyver.github.io/t7QH8Xls1/" class="ctag ctag-0 ctag-t7QH8Xls1" aria-label="">Ubuntu</a>
+                    
               </div>
-              <h1 class="title ularge white bold">关于</h1>
+              <h1 class="title ularge white bold">升级到Ubuntu 19.10</h1>
             </div>
           </div>
         </div>  
@@ -120,18 +118,42 @@ TG    @labwyver
             <article class="main-article post">
               <section class="post-content">
                 <div class="text">
-                  <p><s>一只苦逼的天津中学生这样写道：</s></p>
-<p>本站创建于2020年 4月 9日<br>
-托管在 Github Pages<br>
-辅助工具为 <a href="https://gridea.dev/" target="_blank">「Gridea」</a> (主题 <a href="https://i.immmmm.com/gridea-theme-breek/" traget="_blank"> Breek </a> )</p>
+                  <p>用了 Ubuntu 18.04 LTS 是浑身难受，软件包都不是最新( ´_ゝ`)旦<br>
+不如更新，稳定性都给 爷 爬<br>
+bionic -update- eoan</p>
+<p><strong>例行公事</strong><br>
+<code>sudo apt update &amp;&amp; sudo apt upgrade &amp;&amp; sudo apt dist-upgrade</code></p>
 <!-- more -->
-<p>联系方式<br>
-QQ   2787725235<br>
-TG   <a href="https://t.me/labwyer" target="_blank"> @labwyver </a><br>
-邮箱  a2systemsspb@gmail.com<br>
-裤氨  @labwyver @泡芙还是雪饼</p>
+<p><strong>安装</strong><code>update-manager-core</code><br>
+<code>sudo apt install update-manager-core</code></p>
 <!-- more -->
-<p>写到这里，2020-4-10</p>
+<p><strong>更改分支</strong><br>
+--系统主体<br>
+<code>sudo gedit /etc/update-manager/release-upgrades</code><br>
+最后一行改成<code>Prompt=normal</code><br>
+--软件源<br>
+<code>sudo sed -i 's/bionic/eoan/g' /etc/apt/sources.list //意思大概是把更新分支从18改成19</code></p>
+<!-- more -->
+<p><strong>禁用PPA</strong><br>
+<code>sudo sed -i 's/^/#/' /etc/apt/sources.list.d/*.list</code></p>
+<!-- more -->
+<p><strong>最小升级 &amp; 完整升级</strong><br>
+<code>sudo apt update //最好分开执行</code><br>
+<code>sudo apt upgrade</code><br>
+<code>sudo apt dist-upgrade</code><br>
+<s>中</s>出现的选项，根据英文选择无脑更新<br>
+<strong>清理</strong><br>
+<code>sudo apt autoremove &amp;&amp; sudo apt clean</code><br>
+<strong>重启</strong><br>
+<code>sudo systemctl reboot -i //老ctl人了</code></p>
+<!-- more -->
+<p><strong>启用PPA</strong><br>
+<code>sudo sed -i '/deb/s/^#//g' /etc/apt/sources.list.d/*.list</code><br>
+<code>sudo sed -i 's/bionic/eoan/g' /etc/apt/sources.list.d/*.list</code><br>
+执行完以上命令后，<em>例行公事</em>一下<br>
+如果个别软件更新出错，把<code>eoan</code>改回<code>bionic</code>即可</p>
+<!-- more -->
+<p><s>看着屏幕上滚动的命令超爽的</s></p>
 
                 </div>
                 <div class="clear"></div>
@@ -141,6 +163,32 @@ TG   <a href="https://t.me/labwyer" target="_blank"> @labwyver </a><br>
 
             <section class="related section">
               
+              <article class="prev grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://labwyver.github.io/media/images/gridea.jpg');"></div>
+                 <a href="https://labwyver.github.io/sheng-ji-dao-ubuntu-1910/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="20-04-12">20-04-12</time>
+                  <h4 class="title white no-margin">升级到Ubuntu 19.10</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://labwyver.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://i.loli.net/2020/04/12/FHMqQvs8SCtYkcd.jpg');"></div>
+                 <a href="https://labwyver.github.io/3-smbd/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="20-04-12">20-04-12</time>
+                  <h4 class="title white no-margin">用 SMB 服务在局域网内共享文件</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://labwyver.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
               
 
                 <div class="clear"></div>
