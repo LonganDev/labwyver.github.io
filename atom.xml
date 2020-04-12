@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://labwyver.github.io</id>
     <title>桂圆的^H^资料站  -  labwyver Project H</title>
-    <updated>2020-04-11T02:11:32.920Z</updated>
+    <updated>2020-04-12T02:06:40.232Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://labwyver.github.io"/>
     <link rel="self" href="https://labwyver.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://labwyver.github.io/images/avatar.png</logo>
     <icon>https://labwyver.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 桂圆的^H^资料站  -  labwyver Project H</rights>
+    <entry>
+        <title type="html"><![CDATA[用 SMB 服务在局域网内共享文件]]></title>
+        <id>https://labwyver.github.io/3-smbd/</id>
+        <link href="https://labwyver.github.io/3-smbd/">
+        </link>
+        <updated>2020-04-12T01:54:22.000Z</updated>
+        <content type="html"><![CDATA[<p>暂时想不到更好的传输协议，用SMB协议能与Windows共享，就选它了<br>
+<s>其实终端用的是Android</s><br>
+因为这里部署好了，后面的<a href="/1-print-cups/" target="_blank">CUPS服务</a>也就顺理成章（逃</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Terminator + Zsh 终端修改]]></title>
         <id>https://labwyver.github.io/2-terminal/</id>

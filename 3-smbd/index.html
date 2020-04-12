@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>我的观影 | 桂圆的^H^资料站  -  labwyver Project H</title>
+<title>用 SMB 服务在局域网内共享文件 | 桂圆的^H^资料站  -  labwyver Project H</title>
 <meta name="description" content="想必，女孩子是由砂糖、香辛料和某些美好的东西组成的吧..." />
 <link rel="shortcut icon" href="https://labwyver.github.io/favicon.ico">
 <link rel="stylesheet" href="https://labwyver.github.io/styles/main.css">
@@ -19,13 +19,15 @@
 
 
     <meta name="referrer" content="never">
-    <link rel="stylesheet" href="https://labwyver.github.io/media/js/Bmdb.min.css">
-    <script type='text/javascript' src='https://labwyver.github.io/media/js/Bmdb.min.js'></script>
+    <meta name="description" content="暂时想不到更好的传输协议，用SMB协议能与Windows共享，就选它了
+其实终端用的是Android
+因为这里部署好了，后面的CUPS服务也就顺理成章（逃
+..." />
+    <meta name="keywords" content="Ubuntu" />
+    <script src="https://labwyver.github.io/media/js/waterfall.min.js"></script>
+    <script src="https://labwyver.github.io/media/js/prism.min.js"></script>
   </head>
   <body>
-    <!-- start: #wrapper -->
-    <div class="wrapper">
-      
             <header id="header" class="grid-container">
         <!-- start: .menu-wrapper -->
         <div class="menu-mobile"> 
@@ -86,14 +88,79 @@
         </div>
       </div>
 
-      <main id="friends" class="main fullcover no-sidebar content">
-        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('https://i.loli.net/2020/04/12/FHMqQvs8SCtYkcd.jpg');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="20-04-12"><i class="fa fa-calendar"></i><span class="lately">12 分钟前</span></time>
+              
+              <a href="https://labwyver.github.io/3-smbd/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/3-smbd/"> </span>
+              </a>
+              <span id="/3-smbd/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+                      <a href="https://labwyver.github.io/t7QH8Xls1/" class="ctag ctag-0 ctag-t7QH8Xls1" aria-label="">Ubuntu</a>
+                    
+              </div>
+              <h1 class="title ularge white bold">用 SMB 服务在局域网内共享文件</h1>
+            </div>
+          </div>
+        </div>  
+
         <div class="epcl-page-wrapper">
-          <div class="section-content" style="margin-top:3em;"></div>
-        </div>
-        </div>
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <p>暂时想不到更好的传输协议，用SMB协议能与Windows共享，就选它了<br>
+<s>其实终端用的是Android</s><br>
+因为这里部署好了，后面的<a href="/1-print-cups/" target="_blank">CUPS服务</a>也就顺理成章（逃</p>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://i.loli.net/2020/04/11/UdXL36MehzQHlVq.jpg');"></div>
+                 <a href="https://labwyver.github.io/2-terminal/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="20-04-10">20-04-10</time>
+                  <h4 class="title white no-margin">Terminator + Zsh 终端修改</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://labwyver.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+              </div>
+              <div class="clear"></div>
+            
+
+            </div>
+          </div>
       </main>
-        <footer id="footer" class="grid-container">
+
+          <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
               <div class="grid-33 tablet-grid-50 mobile-grid-100">
@@ -222,15 +289,9 @@
 <script src="https://cdn.jsdelivr.net/gh/labwyver/labwyver.github.io/media/js/jquery.min.js"></script>
 
 
-    <script>
-    new Bmdb({
-      type: 'movies',
-      selector: '.section-content',
-      secret: '0bba46738324c778ad2da662837c14d2c1e5bceb22e3729febc9fd3677bdcea5',
-      noMoreText: '没有更多数据了',
-      limit: 30
-    })
-    </script>
+      
+    <script src="https://labwyver.github.io/media/js/functions-post.js"></script>
+
     </div>
     <!-- end: #wrapper -->
   </body>
