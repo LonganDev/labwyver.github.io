@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://labwyver.github.io</id>
     <title>桂圆的^H^资料站  -  labwyver Project H</title>
-    <updated>2020-04-12T02:06:40.232Z</updated>
+    <updated>2020-04-12T02:27:19.818Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://labwyver.github.io"/>
     <link rel="self" href="https://labwyver.github.io/atom.xml"/>
@@ -16,9 +16,35 @@
         <link href="https://labwyver.github.io/3-smbd/">
         </link>
         <updated>2020-04-12T01:54:22.000Z</updated>
+        <summary type="html"><![CDATA[<p>暂时想不到更好的传输协议，用SMB协议能与Windows共享，就选它了<br>
+<s>其实终端用的是Android</s><br>
+因为这里部署好了，后面的<a href="/1-print-cups/" target="_blank">CUPS服务</a>也就顺理成章（逃</p>
+<p><strong>先选定共享文件夹</strong>(这里为~/share/)<br>
+<code>mkdir ~/share</code><br>
+<code>chmod 777 ~/share</code></p>
+]]></summary>
         <content type="html"><![CDATA[<p>暂时想不到更好的传输协议，用SMB协议能与Windows共享，就选它了<br>
 <s>其实终端用的是Android</s><br>
 因为这里部署好了，后面的<a href="/1-print-cups/" target="_blank">CUPS服务</a>也就顺理成章（逃</p>
+<p><strong>先选定共享文件夹</strong>(这里为~/share/)<br>
+<code>mkdir ~/share</code><br>
+<code>chmod 777 ~/share</code></p>
+<!-- more -->
+<p><strong>安装Samba服务器</strong><br>
+<code>sudo apt-get install samba samba-common</code></p>
+<!-- more -->
+<p><strong>创建用户</strong><br>
+<code>sudo smbpasswd -a wyver //会提示输入密码，输入两次</code></p>
+<!-- more -->
+<p><strong>更改配置文件</strong><br>
+<code>sudo gedit /etc/samba/smb.conf</code><br>
+在文件结尾添加以下内容<br>
+<a href="https://h.labwyver.cn/smb-c.txt" target="_blank">「点击查看，格式为txt文档」</a></p>
+<!-- more -->
+<p><strong>重启SMB服务</strong><br>
+<code>sudo service smbd restart</code></p>
+<p>好了，<a href="/1-print-cups/" target="_blank">上网课打卷子一气呵成</a><br>
+用户名 密码刚才已经设置好了，Android端用Mixplorer添加存储器就可以访问了Nya</p>
 ]]></content>
     </entry>
     <entry>
@@ -56,7 +82,8 @@
 <em>3.更改设置</em><br>
 <code>nautilus -q</code>                                                           //生效<br>
 <code>sudo apt remove nautilus-extension-gnome-terminal</code>     //删除原选项<br>
-<em>4.按个人喜好稍微改一下Terminator的设置（比如透明度）</em></p>
+<em>4.按个人喜好稍微改一下Terminator的设置（比如透明度）</em><br>
+<img src="https://labwyver.github.io/post-images/1586657407823.png" alt="" loading="lazy"></p>
 <!-- more -->
 <p><strong>安装 Zsh</strong><br>
 <code>sudo apt-get install zsh</code>                                 //安装<br>
@@ -68,6 +95,8 @@
 <code>gedit ~/.zshrc</code><br>
 结尾加入<br>
 <a href="https://h.labwyver.cn/bira.txt" target="_blank">「点击查看，格式为txt文档」</a></p>
+<p>好了，放张成果图～<img src="https://labwyver.github.io/post-images/1586657398051.png" alt="" loading="lazy"><br>
+<s><strong>其实我已经忘掉Kally的终端长什么样子了</strong></s></p>
 ]]></content>
     </entry>
     <entry>
@@ -76,9 +105,16 @@
         <link href="https://labwyver.github.io/1-print-cups/">
         </link>
         <updated>2020-04-09T12:57:12.000Z</updated>
-        <content type="html"><![CDATA[<p>原理是电脑连接打印机（物理，USB）<br>
-通过SMB服务+CUPS服务局域网内共享</p>
+        <summary type="html"><![CDATA[<p>原理是电脑连接打印机（物理，USB）<br>
+通过SMB服务+CUPS服务局域网内共享<br>
+<a href="/3-smbd/" target="_blank">SMB服务配置点我查看</a></p>
 <p><s>目前还没研究出怎么用真正的“局域网”，OPEN***先凑活着用</s></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>原理是电脑连接打印机（物理，USB）<br>
+通过SMB服务+CUPS服务局域网内共享<br>
+<a href="/3-smbd/" target="_blank">SMB服务配置点我查看</a></p>
+<p><s>目前还没研究出怎么用真正的“局域网”，OPEN***先凑活着用</s></p>
+<!-- more -->
 <p>安装依赖<br>
 <code>sudo apt install autoconf build-essential libavahi-client-dev libgnutls28-dev libkrb5-dev libnss-mdns libpam-dev libsystemd-dev libusb-1.0-0-dev zlib1g-dev</code></p>
 <p>下载CUPS 2.28并编译安装<br>

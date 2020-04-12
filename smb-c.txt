@@ -1,0 +1,12 @@
+[share]
+comment = share folder
+browseable = yes
+path = /home/linuxidc/share
+create mask = 0700
+directory mask = 0700
+valid users = wyver
+force user = wyver
+force group = wyver
+public = yes
+available = yes
+writable = yes
