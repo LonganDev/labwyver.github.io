@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>P1505n 假装实现网络打印 | 桂圆的^H^资料站  -  labwyver Project H</title>
+<title>OpenVPN 远程回家 | 桂圆的^H^资料站  -  labwyver Project H</title>
 <meta name="description" content="想必，女孩子是由砂糖、香辛料和某些美好的东西组成的吧..." />
 <link rel="shortcut icon" href="https://labwyver.github.io/favicon.ico">
 <link rel="stylesheet" href="https://labwyver.github.io/styles/main.css">
@@ -19,14 +19,20 @@
 
 
     <meta name="referrer" content="never">
-    <meta name="description" content="
-原理是电脑连接打印机（物理，USB）
-通过SMB服务+CUPS服务局域网内共享
-SMB服务配置点我查看
-目前还没研究出怎么用真正的“局域网”，OPEN***先凑活着用
-安装依赖
-sudo apt install autoconf buil..." />
-    <meta name="keywords" content="文件共享,Ubuntu" />
+    <meta name="description" content="1：需要自备域名一个，且在中的服务—动态DNS中设置好。
+
+设置名称，添加
+
+如图设置
+
+
+
+2：开始设置openvpn，按图操作。
+
+
+注意客户端网段和路由器网段不能重复 （别问我怎么知道的）
+先点最下方的生成证书，等待显示证书已生成后，..." />
+    <meta name="keywords" content="OpenWRT" />
     <script src="https://labwyver.github.io/media/js/waterfall.min.js"></script>
     <script src="https://labwyver.github.io/media/js/prism.min.js"></script>
   </head>
@@ -94,25 +100,23 @@ sudo apt install autoconf buil..." />
       <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
 
         <div class="center content">
-          <div class="featured-image cover" style="background-image: url('https://i.loli.net/2020/04/09/BcKOzkJNlgpS2rY.jpg');">
+          <div class="featured-image cover" style="background-image: url('https://i.loli.net/2020/04/19/ijLlHgzWf9EpR76.jpg');">
             <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="20-04-09"><i class="fa fa-calendar"></i><span class="lately">10 天前</span></time>
+              <time class="meta-info" style="float:left;" datetime="20-04-19"><i class="fa fa-calendar"></i><span class="lately">36 分钟前</span></time>
               
-              <a href="https://labwyver.github.io/1-print-cups/#comments" class="comments meta-info" title="">
-                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/1-print-cups/"> </span>
+              <a href="https://labwyver.github.io/openvpn/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/openvpn/"> </span>
               </a>
-              <span id="/1-print-cups/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              <span id="/openvpn/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
               
             </div>
             <div class="info">
               <div class="tags ">
                 
-                      <a href="https://labwyver.github.io/dJs73ia_d/" class="ctag ctag-0 ctag-dJs73ia_d" aria-label="">文件共享</a>
-                    
-                      <a href="https://labwyver.github.io/t7QH8Xls1/" class="ctag ctag-1 ctag-t7QH8Xls1" aria-label="">Ubuntu</a>
+                      <a href="https://labwyver.github.io/0s5N6W6ot/" class="ctag ctag-0 ctag-0s5N6W6ot" aria-label="">OpenWRT</a>
                     
               </div>
-              <h1 class="title ularge white bold">P1505n 假装实现网络打印</h1>
+              <h1 class="title ularge white bold">OpenVPN 远程回家</h1>
             </div>
           </div>
         </div>  
@@ -122,31 +126,51 @@ sudo apt install autoconf buil..." />
             <article class="main-article post">
               <section class="post-content">
                 <div class="text">
-                  <!-- more -->
-<p>原理是电脑连接打印机（物理，USB）<br>
-通过SMB服务+CUPS服务局域网内共享<br>
-<a href="/3-smbd/" target="_blank">SMB服务配置点我查看</a></p>
-<p><s>目前还没研究出怎么用真正的“局域网”，OPEN***先凑活着用</s></p>
-<p><strong>安装依赖</strong><br>
-<code>sudo apt install autoconf build-essential libavahi-client-dev libgnutls28-dev libkrb5-dev libnss-mdns libpam-dev libsystemd-dev libusb-1.0-0-dev zlib1g-dev</code></p>
-<p><strong>下载CUPS 2.28并编译安装</strong><br>
-<code>cd /tmp</code><br>
-<code>wget -c https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/cups/2.2.8-5ubuntu1.2/cups_2.2.8.orig.tar.gz</code><br>
-<code>tar zxvf cups_2.2.8.orig.tar.gz</code><br>
-<code>cd cups-2.2.8</code><br>
-<code>./configure</code><br>
-<code>make</code><br>
-<code>sudo make install</code></p>
-<p><strong>保持CUPS服务运行</strong><br>
-<code>sudo apt-mark hold cups</code></p>
-<p><strong>重启CUPS服务</strong><br>
-<code>sudo service cups restart</code></p>
-<p>然后进入CUPS管理页<br>
-<a href="http://localhost:631/">http://localhost:631/</a><br>
-<img src="https://labwyver.github.io/post-images/1586437577766.png" alt="" loading="lazy"><br>
-挑钩全选，Change Settings</p>
-<p>Enjoy~<br>
-上网课打卷子一气呵成</p>
+                  <p>1：需要自备域名一个，且在中的服务—动态DNS中设置好。<br>
+<img src="https://labwyver.github.io/post-images/1587262114263.png" alt="" loading="lazy"><br>
+<em>设置名称，添加</em><br>
+<img src="https://labwyver.github.io/post-images/1587261950413.png" alt="" loading="lazy"><br>
+<em>如图设置</em><br>
+<img src="https://labwyver.github.io/post-images/1587262002955.png" alt="" loading="lazy"><br>
+<img src="https://labwyver.github.io/post-images/1587262026166.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>2：开始设置openvpn，按图操作。<br>
+<img src="https://labwyver.github.io/post-images/1587262334801.png" alt="" loading="lazy"><br>
+<img src="https://labwyver.github.io/post-images/1587262172998.png" alt="" loading="lazy"><br>
+注意客户端网段和路由器网段不能重复 <s>（别问我怎么知道的）</s><br>
+先点最下方的生成证书，等待显示证书已生成后，再按图进行操作（生成时间可能需要几分钟）。<br>
+在选择协议的时候，尽量使用UDP协议，因为UDP无法进行端口扫描，所以安全性会比TCP更高。<br>
+完成后，到openvpn界面点击下载.ovpn文件。<br>
+<img src="https://labwyver.github.io/post-images/1587263100195.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>3：在pandoraboxweb界面点击网络-接口-添加新接口<br>
+<img src="https://labwyver.github.io/post-images/1587262395921.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>4：设置新接口的参数：名称为vpn1；接口协议为静态地址；接口为以太网适配器“tun0”<br>
+<img src="https://labwyver.github.io/post-images/1587262403212.png" alt="" loading="lazy"><br>
+点击提交<br>
+点击提交之后回到网络-接口界面，点击vpn1接口后面的修改。<br>
+<img src="https://labwyver.github.io/post-images/1587262459709.png" alt="" loading="lazy"><br>
+在防火墙设置中设置创建/分配防火墙区域区域中选择lan，并点击保存&amp;应用。<br>
+<img src="https://labwyver.github.io/post-images/1587262534016.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>5：点击网络-防火墙；在后面的三个选项中选择全部接受；然后点击lan后面的修改按钮<br>
+<img src="https://labwyver.github.io/post-images/1587262556116.png" alt="" loading="lazy"><br>
+<img src="https://labwyver.github.io/post-images/1587262569940.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>6：然后点击防火墙的通信规则，新建转发规则。端口号为你之前设置的端口号<br>
+<img src="https://labwyver.github.io/post-images/1587262599183.png" alt="" loading="lazy"><br>
+点击添加并编辑<br>
+这儿选择的协议类型要与前面OEPNVPN里面的类型一致。<br>
+<img src="https://labwyver.github.io/post-images/1587262676656.png" alt="" loading="lazy"><br>
+<img src="https://labwyver.github.io/post-images/1587262934124.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>7：<a href="https://www.apkmirror.com/apk/openvpn/openvpn-connect/
+" target="_blank">手机下载openvpn软件</a>，点击左侧的Import Profile，导入刚刚下载的.ovpn文件。<br>
+<img src="https://labwyver.github.io/post-images/1587263256685.png" alt="" loading="lazy"><br>
+出现下图即为成功<br>
+<img src="https://labwyver.github.io/post-images/1587263262665.png" alt="" loading="lazy"><br>
+此时手机就可以使用数据流量通过ipv4地址来访问家里的路由器以及局域网内的设备了，enjoy…</p>
 
                 </div>
                 <div class="clear"></div>
@@ -156,19 +180,19 @@ sudo apt install autoconf buil..." />
 
             <section class="related section">
               
-              <article class="prev grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://i.loli.net/2020/04/11/UdXL36MehzQHlVq.jpg');"></div>
-                 <a href="https://labwyver.github.io/2-terminal/" class="full-link"></a>
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://i.loli.net/2020/04/12/MrWvohUHeucjkDb.jpg');"></div>
+                 <a href="https://labwyver.github.io/update-1910/" class="full-link"></a>
                  <div class="info">
-                  <time datetime="20-04-10">20-04-10</time>
-                  <h4 class="title white no-margin">Terminator + Zsh 终端修改</h4>
+                  <time datetime="20-04-12">20-04-12</time>
+                  <h4 class="title white no-margin">升级到Ubuntu 19.10</h4>
                 </div>
                  <span class="epcl-button red">
-                  <img src="https://labwyver.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                  <img src="https://labwyver.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
                 </span>
                 <div class="overlay"></div>
               </article>
-              
               
 
                 <div class="clear"></div>

@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>P1505n 假装实现网络打印 | 桂圆的^H^资料站  -  labwyver Project H</title>
+<title>OpenWRT | 桂圆的^H^资料站  -  labwyver Project H</title>
 <meta name="description" content="想必，女孩子是由砂糖、香辛料和某些美好的东西组成的吧..." />
 <link rel="shortcut icon" href="https://labwyver.github.io/favicon.ico">
 <link rel="stylesheet" href="https://labwyver.github.io/styles/main.css">
@@ -18,19 +18,11 @@
 <script src="https://cdn.jsdelivr.net/gh/labwyver/labwyver.github.io/media/js/jquery.min.js"></script>
 
 
-    <meta name="referrer" content="never">
-    <meta name="description" content="
-原理是电脑连接打印机（物理，USB）
-通过SMB服务+CUPS服务局域网内共享
-SMB服务配置点我查看
-目前还没研究出怎么用真正的“局域网”，OPEN***先凑活着用
-安装依赖
-sudo apt install autoconf buil..." />
-    <meta name="keywords" content="文件共享,Ubuntu" />
-    <script src="https://labwyver.github.io/media/js/waterfall.min.js"></script>
-    <script src="https://labwyver.github.io/media/js/prism.min.js"></script>
   </head>
   <body>
+    <!-- start: #wrapper -->
+    <div class="wrapper">
+      
             <header id="header" class="grid-container">
         <!-- start: .menu-wrapper -->
         <div class="menu-mobile"> 
@@ -91,103 +83,45 @@ sudo apt install autoconf buil..." />
         </div>
       </div>
 
-      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
-
-        <div class="center content">
-          <div class="featured-image cover" style="background-image: url('https://i.loli.net/2020/04/09/BcKOzkJNlgpS2rY.jpg');">
-            <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="20-04-09"><i class="fa fa-calendar"></i><span class="lately">10 天前</span></time>
-              
-              <a href="https://labwyver.github.io/1-print-cups/#comments" class="comments meta-info" title="">
-                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/1-print-cups/"> </span>
-              </a>
-              <span id="/1-print-cups/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
-              
-            </div>
-            <div class="info">
-              <div class="tags ">
-                
-                      <a href="https://labwyver.github.io/dJs73ia_d/" class="ctag ctag-0 ctag-dJs73ia_d" aria-label="">文件共享</a>
-                    
-                      <a href="https://labwyver.github.io/t7QH8Xls1/" class="ctag ctag-1 ctag-t7QH8Xls1" aria-label="">Ubuntu</a>
-                    
-              </div>
-              <h1 class="title ularge white bold">P1505n 假装实现网络打印</h1>
-            </div>
-          </div>
-        </div>  
-
+      <main id="home" class="main fullcover no-sidebar content">
+        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
         <div class="epcl-page-wrapper">
-          <div class="left-content grid-70 np-mobile">
-            <article class="main-article post">
-              <section class="post-content">
-                <div class="text">
-                  <!-- more -->
-<p>原理是电脑连接打印机（物理，USB）<br>
-通过SMB服务+CUPS服务局域网内共享<br>
-<a href="/3-smbd/" target="_blank">SMB服务配置点我查看</a></p>
-<p><s>目前还没研究出怎么用真正的“局域网”，OPEN***先凑活着用</s></p>
-<p><strong>安装依赖</strong><br>
-<code>sudo apt install autoconf build-essential libavahi-client-dev libgnutls28-dev libkrb5-dev libnss-mdns libpam-dev libsystemd-dev libusb-1.0-0-dev zlib1g-dev</code></p>
-<p><strong>下载CUPS 2.28并编译安装</strong><br>
-<code>cd /tmp</code><br>
-<code>wget -c https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/cups/2.2.8-5ubuntu1.2/cups_2.2.8.orig.tar.gz</code><br>
-<code>tar zxvf cups_2.2.8.orig.tar.gz</code><br>
-<code>cd cups-2.2.8</code><br>
-<code>./configure</code><br>
-<code>make</code><br>
-<code>sudo make install</code></p>
-<p><strong>保持CUPS服务运行</strong><br>
-<code>sudo apt-mark hold cups</code></p>
-<p><strong>重启CUPS服务</strong><br>
-<code>sudo service cups restart</code></p>
-<p>然后进入CUPS管理页<br>
-<a href="http://localhost:631/">http://localhost:631/</a><br>
-<img src="https://labwyver.github.io/post-images/1586437577766.png" alt="" loading="lazy"><br>
-挑钩全选，Change Settings</p>
-<p>Enjoy~<br>
-上网课打卷子一气呵成</p>
+          <div class="left-content grid-70 np-mobile widget_epcl_related_articles">
+                
+            <!-- start: .articles -->
+            <div class="main-article post">
+  <h2 class="year"># OpenWRT</h2>
+    
+      <article class="item default grid-33 tablet-grid-50 np-mobile">
+        <a href="https://labwyver.github.io/openvpn/" class="thumb hover-effect">
+          <span class="fullimage cover" style="display: block;background-image: url('https://i.loli.net/2020/04/19/ijLlHgzWf9EpR76.jpg');"></span>
+        </a>
+        <div class="info gradient-effect">
+          <time datetime="20-04-19">20-04-19</time>
+          <h4 class="title usmall">
+            <a href="https://labwyver.github.io/openvpn/">OpenVPN 远程回家</a>
+          </h4>
+        </div>
+      </article>
 
-                </div>
-                <div class="clear"></div>
-              </section>
-            </article>
-            <div class="clear"></div>
-
-            <section class="related section">
-              
-              <article class="prev grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://i.loli.net/2020/04/11/UdXL36MehzQHlVq.jpg');"></div>
-                 <a href="https://labwyver.github.io/2-terminal/" class="full-link"></a>
-                 <div class="info">
-                  <time datetime="20-04-10">20-04-10</time>
-                  <h4 class="title white no-margin">Terminator + Zsh 终端修改</h4>
-                </div>
-                 <span class="epcl-button red">
-                  <img src="https://labwyver.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
-                </span>
-                <div class="overlay"></div>
-              </article>
-              
-              
-
-                <div class="clear"></div>
-            </section>
-
-              <div class="clear"></div>
-              
+    
+    <div class="clear"></div>
+</div>
+            <!-- end: .articles -->
             
-              <div id="comments" class="bg-white hosted ">
-                <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+                        <div class="epcl-pagination section">
+              <div class="nav">
+                
+                
               </div>
-              <div class="clear"></div>
-            
-
             </div>
+            
           </div>
+          </div>
+        </div>
       </main>
 
-          <footer id="footer" class="grid-container">
+        <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
               <div class="grid-33 tablet-grid-50 mobile-grid-100">
@@ -323,9 +257,6 @@ sudo apt install autoconf buil..." />
 
 <script src="https://cdn.jsdelivr.net/gh/labwyver/labwyver.github.io/media/js/jquery.min.js"></script>
 
-
-      
-    <script src="https://labwyver.github.io/media/js/functions-post.js"></script>
 
     </div>
     <!-- end: #wrapper -->

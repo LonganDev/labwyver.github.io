@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://labwyver.github.io</id>
     <title>桂圆的^H^资料站  -  labwyver Project H</title>
-    <updated>2020-04-13T12:21:44.284Z</updated>
+    <updated>2020-04-19T02:28:45.736Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://labwyver.github.io"/>
     <link rel="self" href="https://labwyver.github.io/atom.xml"/>
@@ -10,6 +10,67 @@
     <logo>https://labwyver.github.io/images/avatar.png</logo>
     <icon>https://labwyver.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 桂圆的^H^资料站  -  labwyver Project H</rights>
+    <entry>
+        <title type="html"><![CDATA[OpenVPN 远程回家]]></title>
+        <id>https://labwyver.github.io/openvpn/</id>
+        <link href="https://labwyver.github.io/openvpn/">
+        </link>
+        <updated>2020-04-19T01:52:18.000Z</updated>
+        <summary type="html"><![CDATA[<p>1：需要自备域名一个，且在中的服务—动态DNS中设置好。<br>
+<img src="https://labwyver.github.io/post-images/1587262114263.png" alt="" loading="lazy"><br>
+<em>设置名称，添加</em><br>
+<img src="https://labwyver.github.io/post-images/1587261950413.png" alt="" loading="lazy"><br>
+<em>如图设置</em><br>
+<img src="https://labwyver.github.io/post-images/1587262002955.png" alt="" loading="lazy"><br>
+<img src="https://labwyver.github.io/post-images/1587262026166.png" alt="" loading="lazy"></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>1：需要自备域名一个，且在中的服务—动态DNS中设置好。<br>
+<img src="https://labwyver.github.io/post-images/1587262114263.png" alt="" loading="lazy"><br>
+<em>设置名称，添加</em><br>
+<img src="https://labwyver.github.io/post-images/1587261950413.png" alt="" loading="lazy"><br>
+<em>如图设置</em><br>
+<img src="https://labwyver.github.io/post-images/1587262002955.png" alt="" loading="lazy"><br>
+<img src="https://labwyver.github.io/post-images/1587262026166.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>2：开始设置openvpn，按图操作。<br>
+<img src="https://labwyver.github.io/post-images/1587262334801.png" alt="" loading="lazy"><br>
+<img src="https://labwyver.github.io/post-images/1587262172998.png" alt="" loading="lazy"><br>
+注意客户端网段和路由器网段不能重复 <s>（别问我怎么知道的）</s><br>
+先点最下方的生成证书，等待显示证书已生成后，再按图进行操作（生成时间可能需要几分钟）。<br>
+在选择协议的时候，尽量使用UDP协议，因为UDP无法进行端口扫描，所以安全性会比TCP更高。<br>
+完成后，到openvpn界面点击下载.ovpn文件。<br>
+<img src="https://labwyver.github.io/post-images/1587263100195.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>3：在pandoraboxweb界面点击网络-接口-添加新接口<br>
+<img src="https://labwyver.github.io/post-images/1587262395921.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>4：设置新接口的参数：名称为vpn1；接口协议为静态地址；接口为以太网适配器“tun0”<br>
+<img src="https://labwyver.github.io/post-images/1587262403212.png" alt="" loading="lazy"><br>
+点击提交<br>
+点击提交之后回到网络-接口界面，点击vpn1接口后面的修改。<br>
+<img src="https://labwyver.github.io/post-images/1587262459709.png" alt="" loading="lazy"><br>
+在防火墙设置中设置创建/分配防火墙区域区域中选择lan，并点击保存&amp;应用。<br>
+<img src="https://labwyver.github.io/post-images/1587262534016.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>5：点击网络-防火墙；在后面的三个选项中选择全部接受；然后点击lan后面的修改按钮<br>
+<img src="https://labwyver.github.io/post-images/1587262556116.png" alt="" loading="lazy"><br>
+<img src="https://labwyver.github.io/post-images/1587262569940.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>6：然后点击防火墙的通信规则，新建转发规则。端口号为你之前设置的端口号<br>
+<img src="https://labwyver.github.io/post-images/1587262599183.png" alt="" loading="lazy"><br>
+点击添加并编辑<br>
+这儿选择的协议类型要与前面OEPNVPN里面的类型一致。<br>
+<img src="https://labwyver.github.io/post-images/1587262676656.png" alt="" loading="lazy"><br>
+<img src="https://labwyver.github.io/post-images/1587262934124.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>7：<a href="https://www.apkmirror.com/apk/openvpn/openvpn-connect/
+" target="_blank">手机下载openvpn软件</a>，点击左侧的Import Profile，导入刚刚下载的.ovpn文件。<br>
+<img src="https://labwyver.github.io/post-images/1587263256685.png" alt="" loading="lazy"><br>
+出现下图即为成功<br>
+<img src="https://labwyver.github.io/post-images/1587263262665.png" alt="" loading="lazy"><br>
+此时手机就可以使用数据流量通过ipv4地址来访问家里的路由器以及局域网内的设备了，enjoy…</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[升级到Ubuntu 19.10]]></title>
         <id>https://labwyver.github.io/update-1910/</id>
