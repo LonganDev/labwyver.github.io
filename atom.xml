@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://labwyver.github.io</id>
     <title>桂圆的^H^资料站  -  labwyver Project H</title>
-    <updated>2020-04-19T02:29:55.833Z</updated>
+    <updated>2020-04-19T02:32:15.833Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://labwyver.github.io"/>
     <link rel="self" href="https://labwyver.github.io/atom.xml"/>
@@ -16,15 +16,13 @@
         <link href="https://labwyver.github.io/openvpn/">
         </link>
         <updated>2020-04-19T01:52:18.000Z</updated>
-        <summary type="html"><![CDATA[<p>1：需要自备域名一个，且在中的服务—动态DNS中设置好。<br>
-<img src="https://labwyver.github.io/post-images/1587262114263.png" alt="" loading="lazy"><br>
-<em>设置名称，添加</em><br>
-<img src="https://labwyver.github.io/post-images/1587261950413.png" alt="" loading="lazy"><br>
-<em>如图设置</em><br>
-<img src="https://labwyver.github.io/post-images/1587262002955.png" alt="" loading="lazy"><br>
-<img src="https://labwyver.github.io/post-images/1587262026166.png" alt="" loading="lazy"></p>
+        <summary type="html"><![CDATA[<p>首先，向运营商申请外网ip，获得ipv4地址（动态）。<br>
+把光猫改成桥接WAN，路由器设置拨号。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>1：需要自备域名一个，且在中的服务—动态DNS中设置好。<br>
+        <content type="html"><![CDATA[<p>首先，向运营商申请外网ip，获得ipv4地址（动态）。<br>
+把光猫改成桥接WAN，路由器设置拨号。</p>
+<!-- more -->
+<p>1：需要自备域名一个，且在中的服务—动态DNS中设置好。<br>
 <img src="https://labwyver.github.io/post-images/1587262114263.png" alt="" loading="lazy"><br>
 <em>设置名称，添加</em><br>
 <img src="https://labwyver.github.io/post-images/1587261950413.png" alt="" loading="lazy"><br>
